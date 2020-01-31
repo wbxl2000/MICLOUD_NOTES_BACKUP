@@ -14,6 +14,13 @@ function getLocalTime(nS) {
 
 var jsonObj = require('./mi_notes.json'); 
 // console.log(jsonObj); 
+logger.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+logger.log("+ 本次导出共"+jsonObj.length+"条数据");
+logger.log("+ 导出内容为序号、创建时间、修改时间、内容在两行**之间");
+var today = Date.now();
+logger.log("+ 导出时间:"+getLocalTime(today));
+logger.log("+ Github地址:https://github.com/wbxl2000/MICLOUD_NOTES_BACKUP");
+logger.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 for(var i in jsonObj) {
 	logger.log("------------------------------------------------");
 	logger.log("序号:"+i);
